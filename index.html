@@ -4,13 +4,15 @@
   	<title>Shopular</title>
   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Revalia" rel="stylesheet">
   	<link rel="stylesheet" href="css/main.css">
   </head>
-  <body class="container-fluid row">
+  <body class="container-fluid">
+	  <div class="row">
 	<header class="col-md-12">
 		<h1>Shopular</h1>
 	</header>
-    <div ng-controller='HeaderController as vm' class="col-md-6 col-md-offset-3">
+    <div ng-controller='HeaderController as vm' class="col-md-6 col-md-offset-3 content">
 			<table class="table" ng-class="vm.table">
 				<thead>
 					<tr>
@@ -34,15 +36,17 @@
 					</tr>
 				</tbody>
 			</table>
-			<form novalidate name='itemDetails' ng-submit='vm.update(itemDetails.$valid)' ng-class="{submitted form.submitted}">
-				Name: <input type="text" ng-model="vm.item.name" required>
-				Price: <input type="number" ng-model="vm.item.price" required>
-				Quantity: <input type="number" ng-model="vm.item.quantity" required>
-				Color: <input type="text" ng-model="vm.item.color" required>
-				discount: <input type="number" ng-model="vm.item.discount" required>
-				<button type="submit" ng-click="submitted= true;">Submit</button>
+			<form novalidate name='itemDetails' ng-submit='vm.update(itemDetails.$valid)'>
+				<h3>New Item</h3>
+				<input class="col-md-5" placeholder="Name" type="text" ng-model="vm.item.name" required>
+				<input class="col-md-5 col-md-offset-1" placeholder="Price" type="number" ng-model="vm.item.price" required>
+				<input class="col-md-3" placeholder="Quantity" type="number" ng-model="vm.item.quantity" required>
+				<input class="col-md-3 col-md-offset-1" placeholder="Color" type="text" ng-model="vm.item.color" required>
+				<input class="col-md-3 col-md-offset-1" placeholder="Discount" type="number" ng-model="vm.item.discount" required>
+				<button class="col-md-offset-5" type="submit">Submit</button>
 			</form>
     </div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>

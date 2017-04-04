@@ -1,26 +1,50 @@
 body {
-  background-color: grey; }
+  background-image: url(../bgImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: darkslategrey;
+  font-family: 'Revalia', cursive; }
   body header {
+    height: 100px;
     text-align: center;
     margin-bottom: 20px;
     background-color: darkslategrey; }
-  body div tbody tr {
-    text-align: center; }
-    body div tbody tr .color {
-      height: 30px;
-      width: 30px;
-      border-radius: 5px;
-      border: 2px solid black;
-      margin-bottom: 5px; }
-    body div tbody tr:hover {
-      background-color: yellow;
-      cursor: pointer; }
-  body div form input {
-    display: block; }
-    body div form input.ng-invalid {
-      background-color: red; }
-  body div form button {
-    display: block; }
-
-.submitted .ng-invalid {
-  background-color: red; }
+  body .content {
+    background-color: rgba(61, 61, 61, 0.8);
+    color: white;
+    padding: 25px;
+    margin-bottom: 25px; }
+    body .content button {
+      color: black; }
+    body .content tbody tr {
+      text-align: center; }
+      body .content tbody tr .color {
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        border: 2px solid black;
+        margin-bottom: 5px; }
+      body .content tbody tr:hover {
+        background-color: yellow;
+        color: black;
+        cursor: pointer; }
+    body .content form {
+      padding: 25px;
+      background-color: rgba(61, 61, 61, 0.8); }
+      body .content form h3 {
+        text-align: center; }
+      body .content form input {
+        color: black;
+        display: block;
+        margin-bottom: 10px; }
+        body .content form input::placeholder {
+          color: black; }
+        body .content form input.ng-invalid {
+          background-color: indianred;
+          border: 2px solid red; }
+        body .content form input.ng-pristine {
+          background-color: white; }
+      body .content form button {
+        display: block; }
