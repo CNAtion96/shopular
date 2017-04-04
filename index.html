@@ -34,13 +34,13 @@
 					</tr>
 				</tbody>
 			</table>
-			<form novalidate name='userDetails' ng-submit='vm.update(userDetails.$valid)'>
-				Name: <input type="text" ng-model="vm.item.name" >
-				Price: <input type="number" ng-model="vm.item.price" >
-				Quantity: <input type="number" ng-model="vm.item.quantity" >
-				Color: <input type="text" ng-model="vm.item.color" >
-				discount: <input type="number" ng-model="vm.item.discount" >
-				<input type="submit">
+			<form novalidate name='itemDetails' ng-submit='vm.update(itemDetails.$valid)' ng-class="{submitted form.submitted}">
+				Name: <input type="text" ng-model="vm.item.name" required>
+				Price: <input type="number" ng-model="vm.item.price" required>
+				Quantity: <input type="number" ng-model="vm.item.quantity" required>
+				Color: <input type="text" ng-model="vm.item.color" required>
+				discount: <input type="number" ng-model="vm.item.discount" required>
+				<button type="submit" ng-click="submitted= true;">Submit</button>
 			</form>
     </div>
 

@@ -17,5 +17,10 @@ body {
       cursor: pointer; }
   body div form input {
     display: block; }
+    body div form input.ng-invalid {
+      background-color: red; }
   body div form button {
     display: block; }
+
+.submitted .ng-invalid {
+  background-color: red; }

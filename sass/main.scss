@@ -23,12 +23,19 @@ body {
             }   
         }
         form {
+            
             input {
+                &.ng-invalid {background-color: red;}
                 display: block;
             }
             button {
                 display: block;
             }
         }
+    }
+}
+.submitted {
+    .ng-invalid {
+        background-color: red;
     }
 }
