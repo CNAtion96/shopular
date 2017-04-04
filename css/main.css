@@ -9,8 +9,9 @@ body {
   body header {
     height: 100px;
     text-align: center;
-    margin-bottom: 20px;
-    background-color: darkslategrey; }
+    margin-bottom: 20px; }
+    body header h1 {
+      letter-spacing: 25px; }
   body .content {
     background-color: rgba(61, 61, 61, 0.8);
     color: white;

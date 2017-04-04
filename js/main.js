@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-
+	$('#heading').circleType({radius: 400});
     angular
         .module('taco', [])
         .controller('HeaderController', function Header() {
