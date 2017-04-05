@@ -9,50 +9,52 @@
   </head>
   <body class="container-fluid">
 	  <div class="row">
-	<header class="col-md-12">
-		<h1 id="heading">Shopular</h1>
-	</header>
-    <div ng-controller='HeaderController as vm' class="col-md-6 col-md-offset-3 content">
-			<table class="table" ng-class="vm.table">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Price</th>
-						<th>On Sale</th>
-						<th>Quantity</th>
-						<th>Color</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="item in vm.items | orderBy:'quantity'">
-						<td>{{item.name}}</td>
-						<td>${{vm.getPrice(item)}}</td>
-						<td><span ng-if="item.discount > 0" ><img src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png"></span></td>
-						<td><button ng-click="vm.changeQuantity(item,false)">-</button>
-							{{item.quantity}}
-							<button ng-click="vm.changeQuantity(item,true)">+</button>
-						</td>
-						<td><div class="color" style="background-color:{{item.color}}"></div></td>
-					</tr>
-				</tbody>
-			</table>
-			<form novalidate name='itemDetails' ng-submit='vm.update(itemDetails.$valid)'>
-				<h3>New Item</h3>
-				<input class="col-md-5" placeholder="Name" type="text" ng-model="vm.item.name" required>
-				<input class="col-md-5 col-md-offset-1" placeholder="Price" type="number" ng-model="vm.item.price" required>
-				<input class="col-md-3" placeholder="Quantity" type="number" ng-model="vm.item.quantity" required>
-				<input class="col-md-3 col-md-offset-1" placeholder="Color" type="text" ng-model="vm.item.color" required>
-				<input class="col-md-3 col-md-offset-1" placeholder="Discount" type="number" ng-model="vm.item.discount" required>
-				<button class="col-md-offset-5" type="submit">Submit</button>
-			</form>
-    </div>
+		<header class="col-md-12">
+			<h1 class="col-md-6 col-md-offset-3" id="heading">Shopular</h1>
+		</header>
+		<div ng-controller='HeaderController as vm' class="col-md-6 col-md-offset-3 content">
+				<table class="table" ng-class="vm.table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Price</th>
+							<th>On Sale</th>
+							<th>Quantity</th>
+							<th>Color</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in vm.items | orderBy:'quantity'">
+							<td>{{item.name}}</td>
+							<td>${{vm.getPrice(item)}}</td>
+							<td><span ng-if="item.discount > 0" ><img src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png"></span></td>
+							<td><button ng-click="vm.changeQuantity(item,false)">-</button>
+								{{item.quantity}}
+								<button ng-click="vm.changeQuantity(item,true)">+</button>
+							</td>
+							<td><div class="color" style="background-color:{{item.color}}"></div></td>
+						</tr>
+					</tbody>
+				</table>
+				<form novalidate name='itemDetails' ng-submit='vm.update(itemDetails.$valid)'>
+					<h3>New Item</h3>
+					<input class="col-md-5" placeholder="Name" type="text" ng-model="vm.item.name" required>
+					<input class="col-md-5 col-md-offset-1" placeholder="Price" type="number" ng-model="vm.item.price" required>
+					<input class="col-md-3" placeholder="Quantity" type="number" ng-model="vm.item.quantity" required>
+					<input class="col-md-3 col-md-offset-1" placeholder="Color" type="text" ng-model="vm.item.color" required>
+					<input class="col-md-3 col-md-offset-1" placeholder="Discount" type="number" ng-model="vm.item.discount" required>
+					<button class="col-md-offset-5" type="submit">Submit</button>
+				</form>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="Lettering.js-master/jquery.lettering.js"></script>
+	<script src="FitText.js-master/jquery.fittext.js"></script>
 	<script src="CircleType-master/js/circletype.js"></script>
 	<script src='js/main.js'></script>
+	<script src="js/controllers/tableController.js"></script>
   </body>
 </html>

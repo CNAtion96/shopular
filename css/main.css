@@ -7,12 +7,12 @@ body {
   background-color: darkslategrey;
   font-family: 'Revalia', cursive; }
   body header {
-    height: 100px;
-    text-align: center;
+    height: 110px;
     margin-bottom: 20px;
     vertical-align: top; }
     body header h1 {
-      letter-spacing: 25px; }
+      text-align: center;
+      margin-top: -15px; }
   body .content {
     background-color: rgba(61, 61, 61, 0.8);
     color: white;
