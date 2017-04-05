@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-	$('#heading').circleType({radius: 400});
+	$('#heading').circleType({radius: 345});
     angular
         .module('taco', [])
         .controller('HeaderController', function Header() {
@@ -26,8 +26,8 @@
 				vm.update = function(valid) {
 					console.log(valid);
 					if (valid) {
-							vm.items.push({"name": vm.item.name, "price": vm.item.price, "quantity": vm.item.quantity, "color": vm.item.color, "discount": vm.item.discount,});
-							vm.item = {};
+						vm.items.push({"name": vm.item.name, "price": vm.item.price, "quantity": vm.item.quantity, "color": vm.item.color, "discount": vm.item.discount,});
+						vm.item = {};
 					} else {
 						alert('Finish the form!');
 					}

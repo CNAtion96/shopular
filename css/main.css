@@ -9,7 +9,8 @@ body {
   body header {
     height: 100px;
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    vertical-align: top; }
     body header h1 {
       letter-spacing: 25px; }
   body .content {
@@ -30,7 +31,9 @@ body {
       body .content tbody tr:hover {
         background-color: yellow;
         color: black;
-        cursor: pointer; }
+        cursor: pointer;
+        transform: scale(1.05) skew(-5deg);
+        box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5); }
     body .content form {
       padding: 25px;
       background-color: rgba(61, 61, 61, 0.8); }
