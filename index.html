@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app='taco'>
+<html ng-app='shopular'>
   <head>
   	<title>Shopular</title>
   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,7 +10,7 @@
   <body class="container-fluid">
 	  <div class="row">
 		<header class="col-md-12">
-			<h1 class="col-md-6 col-md-offset-3" id="heading">Shopular</h1>
+			<h1 class="col-md-6 col-md-offset-3" id="heading">The Iron Yard</h1>
 		</header>
 		<div ng-controller='HeaderController as vm' class="col-md-6 col-md-offset-3 content">
 				<table class="table" ng-class="vm.table">
@@ -24,9 +24,9 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="item in vm.items | orderBy:'quantity'">
+						<tr ng-repeat="item in vm.itemData track by $index">
 							<td>{{item.name}}</td>
-							<td>${{vm.getPrice(item)}}</td>
+							<td>{{ vm.getPrice(item) | currency}}</td>
 							<td><span ng-if="item.discount > 0" ><img src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png"></span></td>
 							<td><button ng-click="vm.changeQuantity(item,false)">-</button>
 								{{item.quantity}}
@@ -56,5 +56,6 @@
 	<script src="CircleType-master/js/circletype.js"></script>
 	<script src='js/main.js'></script>
 	<script src="js/controllers/tableController.js"></script>
+	<script src="js/services/data.js"></script>
   </body>
 </html>

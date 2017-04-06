@@ -1,5 +1,9 @@
 (function() {
     'use strict';
-    angular.module('taco', [])
+
+    angular.module('shopular', []);
+        
 })();
+
+//making header text round
 $('#heading').circleType({fitText: true, radius: 358});
